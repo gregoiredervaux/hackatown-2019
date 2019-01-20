@@ -1,3 +1,32 @@
-<p>
-  options works!
-</p>
+<aside class="toolbox">
+  <div class="box">
+    <header>
+      <h1>Category Filter</h1>
+      <button class="github-logo js-source-link"></button>
+    </header>
+
+    <section>
+      <p class="description open-sans">Apply a category filter to the listings shown in the visualization.</p>
+
+      <div class="separator"></div>
+
+      <section class="usage">
+        <header>USAGE</header>
+        <p class="open-sans">Change the selected years to filter the listings.</p>
+      </section>
+
+      <div id="controls">
+        <div id="info">
+          <h3>years</h3>
+        </div>
+        <ul>
+          <li *ngFor="let year of Years">
+            <input type="checkbox" name="{{year}}" id="entire" value="{{year}}" [checked]="Years.includes(year)" (click)="onClick(year)">
+            <label for="entire">{{year}}</label>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="js-footer"></footer>
+  </div>
+</aside>
