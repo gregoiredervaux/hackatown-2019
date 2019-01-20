@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { MapService } from "./map.service";
+
 @NgModule({
   declarations: [
     AppComponent,

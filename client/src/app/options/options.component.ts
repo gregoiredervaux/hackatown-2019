@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import * as carto from '@carto/carto.js';
+import { MapService } from "../map.service";
 
 @Component({
   selector: 'app-options',
@@ -8,12 +8,10 @@ import * as carto from '@carto/carto.js';
 })
 export class OptionsComponent implements OnInit {
 
-  @Input() yearFilter;
-
   Years: number[];
   selectedYear: number[];
 
-  constructor() {
+  constructor(private mapService: MapService) {
     this.Years = [2011,2012,2013,2014,2015,2016,2017,2018];
     this.selectedYear = [2011,2012,2013,2014,2015,2016,2017,2018];
   }
@@ -33,13 +31,13 @@ export class OptionsComponent implements OnInit {
     console.log(isThere);
     if (!isThere){
       this.selectedYear.push(year_value);
-      this.applyFilters();
       console.log(this.selectedYear);
     }
-    console.log(this.yearFilter);
+    this.applyFilters();
   }
 
   applyFilters () {
-    this.yearFilter.setFilter({in: this.selectedYear});
+    console.log(this.mapService);
+    this.mapService.yearFilter.setFilters({in: this.selectedYear});
   }
 }
