@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    const map = L.map('map').setView([45.5088400, -73.5878100], 11);
+    /*const map = L.map('map').setView([45.5088400, -73.5878100], 11);
     map.scrollWheelZoom.disable();
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}.png', {
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
 
 
     this.mapService.client.addLayer(this.mapService.layer);
-    this.mapService.client.getLeafletLayer().addTo(map);
+    this.mapService.client.getLeafletLayer().addTo(map);*/
   }
 
 }

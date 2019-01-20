@@ -1,27 +1,11 @@
 footer {
-    position: fixed;
+    position : fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
-    background: #7700FF;
-    nav {
-        justify-self: right;
-    
-        ul {
-            list-style-type: none;
-            margin: 0; padding: 0;
-
-            li {
-                float: left;
-                    padding: 1.5em;
-                    text-transform: uppercase;
-                    font-size: .8em;
-
-                    &:hover {
-                        background: #8E2BFF;
-                    }
-            }
-        }
-    }
+    background: #1785fb ;
+    padding: 1em;
+    color : white;
+    font-weight: bold;   
 }
